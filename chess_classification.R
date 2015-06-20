@@ -22,7 +22,6 @@ print(summary(fit))
 # make predictions
 probabilities <- predict(fit, testSet[1:36], type="response")
 predictions <- apply(probabilities, 1, which.max)
-
 for(i in 1:2) {
   predictions[which(predictions==i)] <- levels(testSet$won)[i]
 }
