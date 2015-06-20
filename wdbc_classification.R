@@ -1,31 +1,32 @@
 library(MASS)
-data(iris)
 
-index <- 1:nrow(iris)
+data  <- read.csv("~/Documents/ib031_project/wdbc.data", header=FALSE)
+
+index <- 1:nrow(data)
 testIndex <- sample(index, trunc(length(index)/4))
-testSet <- iris[testIndex,]
-trainSet <- iris[-testIndex,]
+testSet <- data[testIndex,]
+trainSet <- data[-testIndex,]
 
 #-------------------------------------------------------------------------------------------------------
 
-ldaFit <- lda(Species~., data=trainSet)
+ldaFit <- lda(V31~., data=trainSet)
 print(summary(ldaFit))
-predictions <- predict(ldaFit, testSet[1:4])$class
-print(table(predictions, testSet$Species))
+predictions <- predict(ldaFit, testSet[,1:30])$class
+print(table(predictions, testSet$V31))
 print(mean(predictions == testSet[,ncol(testSet)]) * 100)
 
 #-------------------------------------------------------------------------------------------------------
 
-fit <- vglm(Species~., family=multinomial, data=trainSet)
+fit <- vglm(V31~., family=multinomial, data=trainSet)
 print(summary(fit))
 # make predictions
-probabilities <- predict(fit, testSet[1:4], type="response")
+probabilities <- predict(fit, testSet[,1:30], type="response")
 predictions <- apply(probabilities, 1, which.max)
 
-for(i in 1:3) {
-  predictions[which(predictions==i)] <- levels(testSet$Species)[i]
+for(i in 1:2) {
+  predictions[which(predictions==i)] <- levels(testSet$V31)[i]
 }
 # summarize accuracy
-print(table(predictions, testSet$Species))
+print(table(predictions, testSet$V31))
 print(mean(predictions == testSet[,ncol(testSet)]) * 100)
 
