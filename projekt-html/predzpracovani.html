@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1250" />
+<title>Machine learning and bioinformatics</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="header">
+	<h1> Projekt </h1>
+	<h2> PV056 </h2>
+</div>
+<div id="menu">
+	<ul>
+		<li><a href="./index.html">Úvod</a></li>
+		<li><a href="./predzpracovani.html">Předzpracování</a></li>
+		<li><a href="./vyber.html">Výběr algoritmu</a></li>
+		<li><a href="./statisticka.html">Statistická významnost</a></li>
+		<li><a href="./vysledky.html">Výsledky</a></li>
+	</ul>
+</div>
+<div id="content">
+	<div id="columnA"> 
+		<h2> Předzpracování dat </h2>
+		<p>
+			Předzpracování muselo zajistit:
+			<ul>
+				<li> převod do arff </li>
+				<li> rozdělení atributu genotypu </li>
+				<li> diskretizace mr hodnot </li>
+			</ul>
+		</p>
+		<p>
+			Data byla dodána ve formátu xls. Největší chyby (text v numerickím atributu atd.) byly opraveny
+			přímo v xls. Následně byl vytvořen css soubor, se kterým již pracoval předzpracovací program.
+		</p>
+		<p>
+			Tento nejprve odstranil všechny nekompletní řádky a sloupce - sestupně podle počtu chybějících
+			hodnot, při shodě bylo možno určit, zda zachovat atribut, nebo instanci. Odstraněné řádky a
+			sloupce spolu s počtem absencí byly zapsány do logovacího souboru v programové složce.
+		</p>
+		<p>
+			Dále bylo vytvořeno dočasné csv, které již bylo bez chybějících hodnot. Toto csv bylo upraveno
+			(rozdělen genotyp, přidán atribut pro diskretizované MR) a následně převedeno do formátu arff.
+			Program automaticky projde data a určí typy atributů - text, číslo, nebo, pokud existují maximálně
+			3 možné hodnoty - výpis těchto hodnot.
+		</p>
+		<p>
+			Program byl vytvořen v jazyku Microsoft Visual Basic 6
+		</p>
+	</div><div id="columnB">
+		<h2> <b> Novinky: </b> </h2>
+		<p><strong>[11/07/2009]</strong> <br /> Spuštěny webové stránky </p>
+		<p><strong>[26/06/2009]</strong> <br /> Výpočet statistické významnosti výsledků </p>
+		<p><strong>[22/05/2009]</strong> <br /> Výběr optimálního algoritmu </p>
+		<p><strong>[20/04/2009]</strong> <br /> Předzpracování dat </p>
+		<br />
+		<h2> <b> Související odkazy: </b> </h2>
+		<a href="http://www.cs.waikato.ac.nz/ml/weka/"> Weka </a> <br />
+		<a href="http://www.fi.muni.cz/usr/popelinsky/lectures/kdd/"> Stránky předmětu </a> <br />
+	</div>
+	<div style="clear: both;">&nbsp;</div>
+</div>
+<div id="footer">
+	<p>Copyright &copy; 2009 Jakub Tischler, Monika Michalovová, Antonín Pavelka. Designed by <a href="http://www.freecsstemplates.org" class="link1">Free CSS Templates</a></p>
+</div>
+</body>
+</html>
