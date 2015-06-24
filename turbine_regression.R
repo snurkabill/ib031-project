@@ -1,3 +1,5 @@
+library(randomForest)
+
 data <- read.table("~/Documents/ib031_project/data.txt", quote="\"", comment.char="")
 
 index <- 1:nrow(data)

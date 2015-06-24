@@ -1,4 +1,4 @@
-
+library(randomForest)
 #-----------------------------------------------------------------------------------------------------
 data <- read.csv("~/Documents/ib031_project/winequality-white.csv", sep=";")
 index <- 1:nrow(data)

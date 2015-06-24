@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-<meta http-equiv="content-type" content="text/html; charset=windows-1250" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Machine learning and bioinformatics</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
@@ -11,61 +11,65 @@
 <body>
 <div id="header">
 	<h1> Projekt </h1>
-	<h2> PV056 </h2>
+	<h2> IB031 </h2>
 </div>
 <div id="menu">
 	<ul>
-		<li><a href="./index.html">Úvod</a></li>
-		<li><a href="./predzpracovani.html">Předzpracování</a></li>
-		<li><a href="./vyber.html">Výběr algoritmu</a></li>
-		<li><a href="./statisticka.html">Statistická významnost</a></li>
-		<li><a href="./vysledky.html">Výsledky</a></li>
+		<li><a href="./index.html">Ăšvod</a></li>
+		<li><a href="./predzpracovani.html">Data</a></li>
+		<li><a href="./vyber.html">Algoritmy</a></li>
+		<li><a href="./vysledky.html">VĂ˝sledky</a></li>
 	</ul>
 </div>
 <div id="content">
 	<div id="columnA"> 
-		<h2> Předzpracování dat </h2>
+		<h2> Data </h2>
 		<p>
-			Předzpracování muselo zajistit:
+			Data byla vybrĂˇna zvlĂˇĹˇĹĄ pro klasifikaci a zvlĂˇĹˇĹĄ pro regresi:
 			<ul>
-				<li> převod do arff </li>
-				<li> rozdělení atributu genotypu </li>
-				<li> diskretizace mr hodnot </li>
+			    <li>Klasifikace:</li>
+			    <ul>
+			    	 <li>Chess(King-Rook vs. King-Pawn)</li>
+			    	 <li>Iris</li>
+			    	 <li>Breast-cancer-Wisconsin</li>
+			    </ul>
+				<li> Regrese: </li>
+				<ul>
+					 <li>Red-wine</li>
+					 <li>White-wine</li>
+					 <li>Condition Based Maintenance of Naval Propulsion</li>
+				</ul>
 			</ul>
 		</p>
 		<p>
-			Data byla dodána ve formátu xls. Největší chyby (text v numerickím atributu atd.) byly opraveny
-			přímo v xls. Následně byl vytvořen css soubor, se kterým již pracoval předzpracovací program.
+			Chess(King-Rook vs. King-Pawn): data, ve kterĂ˝ch se model snaĹľĂ­ pĹ™edpovÄ›dÄ›t, zdali vyhraje bĂ­lĂ˝ nebo ÄŤernĂ˝ hrĂˇÄŤ na zĂˇkladÄ› informacĂ­ z ĹˇachovĂ© hry. Celkem 36 atributĹŻ.
 		</p>
 		<p>
-			Tento nejprve odstranil všechny nekompletní řádky a sloupce - sestupně podle počtu chybějících
-			hodnot, při shodě bylo možno určit, zda zachovat atribut, nebo instanci. Odstraněné řádky a
-			sloupce spolu s počtem absencí byly zapsány do logovacího souboru v programové složce.
+			Iris: namÄ›Ĺ™enĂ© informace kosatcĹŻ. Celkem tĹ™i tĹ™Ă­dy rozkladu (kaĹľdĂˇ tĹ™Ă­da jeden druh kosatce). 4 znĂˇmĂ© atributy pro klasifikaci.
 		</p>
 		<p>
-			Dále bylo vytvořeno dočasné csv, které již bylo bez chybějících hodnot. Toto csv bylo upraveno
-			(rozdělen genotyp, přidán atribut pro diskretizované MR) a následně převedeno do formátu arff.
-			Program automaticky projde data a určí typy atributů - text, číslo, nebo, pokud existují maximálně
-			3 možné hodnoty - výpis těchto hodnot.
+			Breast-cancer-Wisconsin: Data vyuĹľita pro klasifikaci nĂˇdorĹŻ rakoviny prsu. Modely klasifikovaly, zdali jsou nĂˇdory zhoubnĂ© nebo ne. Celkem 31 atributĹŻ.
 		</p>
 		<p>
-			Program byl vytvořen v jazyku Microsoft Visual Basic 6
+			Red-wine: Data pro regresnĂ­ pĹ™eedpovÄ›ÄŹ kvality ÄŤervenĂ©ho vĂ­na na zĂˇkladÄ› jeho vlastnostĂ­, celkem 11 atributĹŻ pro regresi.
 		</p>
-	</div><div id="columnB">
-		<h2> <b> Novinky: </b> </h2>
-		<p><strong>[11/07/2009]</strong> <br /> Spuštěny webové stránky </p>
-		<p><strong>[26/06/2009]</strong> <br /> Výpočet statistické významnosti výsledků </p>
-		<p><strong>[22/05/2009]</strong> <br /> Výběr optimálního algoritmu </p>
-		<p><strong>[20/04/2009]</strong> <br /> Předzpracování dat </p>
-		<br />
-		<h2> <b> Související odkazy: </b> </h2>
-		<a href="http://www.cs.waikato.ac.nz/ml/weka/"> Weka </a> <br />
-		<a href="http://www.fi.muni.cz/usr/popelinsky/lectures/kdd/"> Stránky předmětu </a> <br />
+		<p>
+			White-wine: Data pro regresnĂ­ pĹ™eedpovÄ›ÄŹ kvality bĂ­lĂ©ho vĂ­na na zĂˇkladÄ› jeho vlastnostĂ­, celkem 11 atributĹŻ pro regresi.
+		</p>
+		<p>
+			Gas-turbines: 
+		</p>
+		<p>
+			PĹ™edzpracovĂˇnĂ­: Data z jednotlivĂ˝ch datasetĹŻ nebyla nijak pĹ™edzpracovĂˇna, byla pouĹľita v jiĹľ pĹ™ipravenĂ©m tvaru. 
+		</p>
+		<p>
+			Metodika vĂ˝bÄ›ru dat: Pokud databĂˇze neobsahovala testovacĂ­ mnoĹľinu, byla testovacĂ­ mnoĹľina vygenerovĂˇna nĂˇhodnÄ› v pomÄ›ru 2:1 trĂ©novacĂ­:testovacĂ­. Tento nĂˇhodnĂ˝ vĂ˝bÄ›r byl vĹľdy pro oba testovanĂ© modely vybrĂˇn stejnÄ›. 
+		</p>
 	</div>
 	<div style="clear: both;">&nbsp;</div>
 </div>
 <div id="footer">
-	<p>Copyright &copy; 2009 Jakub Tischler, Monika Michalovová, Antonín Pavelka. Designed by <a href="http://www.freecsstemplates.org" class="link1">Free CSS Templates</a></p>
+	<p>2015 KristĂ˝na PavlĂ­ÄŤovĂˇ(422537), JiĹ™Ă­ Vahala(422802)</a></p>
 </div>
 </body>
 </html>
