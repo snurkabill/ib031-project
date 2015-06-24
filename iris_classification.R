@@ -1,4 +1,5 @@
 library(MASS)
+library(VGAM)
 data(iris)
 
 index <- 1:nrow(iris)

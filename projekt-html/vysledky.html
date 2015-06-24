@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Machine learning and bioinformatics</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="header">
+	<h1> Projekt </h1>
+	<h2> IB031 </h2>
+</div>
+<div id="menu">
+	<ul>
+		<li><a href="./index.html">Úvod</a></li>
+		<li><a href="./predzpracovani.html">Data</a></li>
+		<li><a href="./vyber.html">Algoritmy</a></li>
+		<li><a href="./vysledky.html">Výsledky</a></li>
+	</ul>
+</div>
+<div id="content">
+	<div id="columnA"> 
+		<h2> Výsledky </h2>
+		<h5> Klasifikace: </h5>
+		Kvůli malým datasetům pro klasifikaci jsme spustili skript třikrát (kvůli různému vygenerování trénovací a testovací množiny) a výsledky zprůměrovali
+		<ul>
+			<li>
+				Iris: LDA model dopadl lehce lépe než VGLM. 
+				<ul>
+					<li> průměrný success rate LDA modelu: 96.6..% </li>
+					<li> průměrný success rate VGLM modelu: 94.6..% </li>
+				</ul>
+			</li>
+			<li>
+				Breast-cancer-wisconsin: zde opět LDA bylo o pár procent lepší než VGLM
+				<ul>
+					<li> success rate LDA modelu: 96.8254%</li>
+					<li> success rate VGLM modelu: 93.65079%</li>
+				</ul>
+			</li>
+			<li>
+				Chess: tento dataset byl jediný, kde se LDA ukázalo být i po více opakování horší než VGLM 
+				<ul>
+					<li> success rate LDA modelu: 93.99061% </li>
+					<li> success rate VGLM modelu: 97.37089% </li>
+				</ul>
+			</li>
+			
+		</ul>
+		Z výsledků je patrné, že ani jeden model není lepší než druhý, a němůžeme tedy říci, který model je lepší než jiný. Co se týče rychlosti výpočtu, nebyly pozorovány velké časové rozdíly.
+		<h5> Regrese: </h5>
+		<ul>
+			<li>
+				Red-wine: Chyba lineární regrese: 0.433 oproti chybě regresních stromů: 0.355. 
+			</li>
+			<li>
+				White-wine: Chyba lineární regrese: 0.574 oproti chybě regresních stromů: 0.372.
+			</li>
+			<li>
+				Gas-turbines: Chyba lineární regrese: 3.131423e-06 oproti chybě regresních stromů: 7.645114e-07.
+			</li>
+			<li>
+				Ve všech případech byly regresní stromy úspěšnější oproti jednoduché lineární regresi. Na různých datasetech byly rozdíly markantnější než na jiných. Co se ovšem rychlosti výpočtu týče, tak zde dominovala lineární regrese, která byla vypočítána v řádech milisekund. Regresní stromy si vzaly až desítky sekund pro výpočet.   
+			</li>
+		</ul>
+
+	</div>
+	<div style="clear: both;">&nbsp;</div>
+</div>
+<div id="footer">
+	<p>2015 Kristýna Pavlíčová(422537), Jiří Vahala(422802)</a></p>
+</div>
+</body>
+</html>
