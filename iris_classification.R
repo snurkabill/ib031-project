@@ -2,7 +2,7 @@ library(MASS)
 data(iris)
 
 index <- 1:nrow(iris)
-testIndex <- sample(index, trunc(length(index)/4))
+testIndex <- sample(index, trunc(length(index)/3))
 testSet <- iris[testIndex,]
 trainSet <- iris[-testIndex,]
 

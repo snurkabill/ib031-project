@@ -3,7 +3,7 @@ library(MASS)
 data  <- read.csv("~/Documents/ib031_project/wdbc.data", header=FALSE)
 
 index <- 1:nrow(data)
-testIndex <- sample(index, trunc(length(index)/4))
+testIndex <- sample(index, trunc(length(index)/3))
 testSet <- data[testIndex,]
 trainSet <- data[-testIndex,]
 
