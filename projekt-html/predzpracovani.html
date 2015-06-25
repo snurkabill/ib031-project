@@ -60,16 +60,16 @@
 			Gas-turbines: data týkající se turbín ve fregatách a jejich využití k predikci možného opotřebování.  
 		</p>
 		<p>
-			Předzpracování: Data z jednotlivých datasetů nebyla nijak předzpracována, byla použita v již připraveném tvaru. 
+			Předzpracování: Data z jednotlivých datasetů nebyla nijak předzpracována, byla použita v již připraveném tvaru. Některé datasety byly již normalizovány, jiné ne.
 		</p>
 		<p>
-			Metodika výběru dat: Pokud databáze neobsahovala testovací množinu, byla testovací množina vygenerována náhodně v poměru 2:1 trénovací:testovací. Tento náhodný výběr byl vždy pro oba testované modely vybrán stejně. 
+			Metodika výběru dat: Pokud databáze neobsahovala testovací množinu, byla testovací množina vygenerována náhodně v poměru 2:1 trénovací:testovací. Tento náhodný výběr byl vždy pro oba testované modely vybrán stejně.
 		</p>
 		<p>
 			Metodika testování kvality modelu: 
 			<ul>
 				<li>Klasifikace: byla vygenerována confusion matrix a vypočítán success rate pro klasifikaci, podle kterého se také seřadily oba modely</li>
-				<li>Regrese: pro výsledky regrese byla počítána chyba jako sum((results - target)^2)/len(results).</li>
+				<li>Regrese: pro výsledky regrese byla počítána chyba jako sum((results - target)^2)/len(results), to jest suma kvadratických odchylek dělených velikostí vektoru.</li>
 			</ul>
 		</p>
 	</div>
